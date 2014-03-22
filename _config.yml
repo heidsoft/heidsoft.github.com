@@ -13,8 +13,8 @@ tagline: Site Tagline
 author :
   name : jake.liu
   email : heidsoftg@gmail.com
-  github : heidsoft
-  twitter : heidsoft
+  github : username
+  twitter : username
   feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
