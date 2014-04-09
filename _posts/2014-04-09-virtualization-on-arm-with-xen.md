@@ -8,6 +8,7 @@ tags: []
 {% include JB/setup %}
 
 
+
 With ARM entering the server space, a key technology in play in this segment is Virtualization. Virtualization is not a tool solely for servers and the data center, it is also used in the embedded space in segments like automotive and it is also starting to be used in mobile.
 
 This is not a new technology, IBM pioneered it in the 1960s, and there are many different hypervisors implementing different methods of virtualization. In the Open Source realm there are two major hypervisors: KVM and Xen. Both are interact directly with the Linux kernel, however KVM is solely in the Linux domain whereas Xen works with Linux, *BSD and other UNIX variants.
