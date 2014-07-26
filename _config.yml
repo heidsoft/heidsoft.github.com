@@ -1,18 +1,17 @@
-# This is the default format. 
-# For more see: http://jekyllrb.com/docs/permalinks/
+or more see: http://jekyllrb.com/docs/pe与与与与ink
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile"]
 pygments: true
 
 # Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
+# so be sure to set them if your the与e u
 #
-title : 专注云计算、大数据以及自动化运维研发
+title : 专注云计算与大数据
 tagline: Site Tagline
 author :
   name : jake.liu
-  email : heidsoftg@gmail.com
+  email : heidsoft@sina.com
   github : heidsoft
   twitter : username
   feedburner : feedname
@@ -82,7 +81,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+        short_name : http://heidsoft.github.io
     livefyre :
       site_id : 123
     intensedebate :
