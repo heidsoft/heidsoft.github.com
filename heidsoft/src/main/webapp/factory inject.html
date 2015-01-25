@@ -1,0 +1,29 @@
+<!DOCTYPE html >
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="demo">
+<head>
+    <title></title>
+    <script src="angular/angular.js"></script>
+</head>
+<body ng-controller="demoController">
+    <input type="text" ng-model="data.message" />
+    <pre>{{data.message}}</pre>
+
+    <input type="text" ng-model="data.message" />
+    <pre>{{data.message | reversee}}</pre>
+</body>
+<script>
+    var demo = angular.module("demo", []);
+    demo.controller("demoController", function ($scope, Data) {
+        $scope.data = Data;
+    });
+    demo.factory("Data", function () {
+        return {message:"Jackey"};
+    });
+    demo.filter("reversee", function (Data) {
+        return function (test) {
+            return test.split("").reverse().join("") + " Inject Data " + Data.message;
+        };
+    });
+</script>
+</html>

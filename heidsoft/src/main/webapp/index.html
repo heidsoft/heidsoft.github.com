@@ -1,0 +1,96 @@
+<!---------------------------------------------
+1、演示匿名加载
+2、js单进程执行流
+3、原型链理解
+   a、__proto__：属性每个对象都有
+   b、prototype:类型本身
+heidsoftg@gmail.com
+---------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// (function(){
+		// 	console.info(this);
+		// 	console.info(arguments);
+		// }(window));
+
+		// (function(){
+		// 	console.info(this);
+		// 	console.info(arguments);
+		// })(window)；
+		// 
+		console.log(window);
+		console.log("Step=========================================1");
+		(window);//传入参数
+		(function(a,b){
+			console.log("a="+a);
+			console.log("b="+b);
+		});
+		console.log("Step=========================================2");
+		(function(aObject,bObject){
+			console.log("aObject="+aObject);
+			console.log("bObject="+bObject);
+		})(window);
+
+		console.log("Step=========================================3");
+		(function(aWin,bUndefined){
+			console.log("aWin="+aWin);
+			console.log("bUndefined="+bUndefined);
+		})(window,undefined);
+		console.log("Step=========================================4");
+		(function(aWin,undefined){
+			undefined="fuck undefined....";
+			console.log("aWin="+aWin);
+			console.log("undefined="+undefined);
+		})(window);
+
+
+		console.log("Step=========================================5");
+		var testObject1={a:1,b:2};
+		console.log("Step=========================================6");
+		console.log(testObject1.__proto__);
+		console.log("Step=========================================7");
+		console.log(testObject1.__proto__);
+		testObject1.__proto__ = new Object({a:2,b:5});
+		console.log("Step=========================================8");
+		console.log(testObject1.prototype);
+		console.log("Step=========================================9");
+		console.log(testObject1);
+		testObject1.prototype= new Object({a:2,b:5});
+		console.log("Step=========================================10");
+		console.log(testObject1);
+
+		var Person = function(){};
+
+		Person.prototype.Say= function(){
+			alert("Person say");
+		};
+
+		Person.prototype.Salary=50000;
+		var Programmer = function(){};
+		Programmer.prototype=new Person();//var p1.__proto__=Person.prototype
+		Programmer.prototype.WriteCode = function(){
+			alert("programmer write code");
+		};
+
+		Programmer.prototype.Salary=500;
+		var p = new Programmer();
+		//p.__proto__=Programmer.prototype;
+		//Programmer.prototype.__proto__=Person.prototype;
+		//p.__proto__.__proto__=Person.prototype
+
+		p.Say();
+		p.WriteCode();
+		alert(p.Salary);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+
+</html>
