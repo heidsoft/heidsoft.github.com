@@ -13,6 +13,7 @@ WORKDIR /opt
 COPY . /opt
 WORKDIR /opt/heidsoft.github.com
 CMD echo "start heidsoft...."
+EXPOSE 4000
 ENTRYPOINT jekyll serve
 
 
