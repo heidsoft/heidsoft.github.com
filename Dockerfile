@@ -1,21 +1,18 @@
-# VERSION 0.0.1
-FROM ruby:latest
-MAINTAINER heidsoft "heidsoft@qq.com"
+FROM ruby:2.1.3
+MAINTAINER heidsoft <heidsoftg@gmail.com>
 
-# install ruby
-RUN gem sources --remove https://rubygems.org/
-RUN gem sources -a https://ruby.taobao.org/
-RUN gem install jekyll
-RUN gem install rdiscount
+RUN gem install github-pages
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /opt
+ENV NODE_VERSION 0.10.33
+RUN curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
+        && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
+        && rm "node-v$NODE_VERSION-linux-x64.tar.gz"
 
 COPY . /opt
 
 WORKDIR /opt/heidsoft.github.com
-
 EXPOSE 4000
 
-ENTRYPOINT jekyll serve
-
-
+ENTRYPOINT ["jekyll"]
+CMD ["serve"]
