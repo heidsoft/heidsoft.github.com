@@ -119,8 +119,7 @@ title: cloud&bigdata
                 <span class="text-muted">请随时关注我们</span>
             </h2>
             <p class="lead">
-            <h2>{{ page.title }}</h2>
-            <p>最新文章</p>
+                <h2>{{ page.title }}</h2>
                 <ul>
                     {% for post in site.posts %}　　　　　　
                     <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
