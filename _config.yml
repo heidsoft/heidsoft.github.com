@@ -3,7 +3,6 @@ exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
 permalink:   /articles/:title
 pygments:    true
 markdown:    kramdown
-
 title: heidsoft
 url: "https://heidsoft.github.io/"
 description: "云计算与大数据"
