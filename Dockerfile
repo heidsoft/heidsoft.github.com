@@ -1,6 +1,7 @@
 FROM ruby:2.1.3
 MAINTAINER heidsoft <heidsoftg@gmail.com>
-
+RUN gem sources --remove http://rubygems.org/
+RUN gem sources -a http://ruby.taobao.org/
 RUN gem install github-pages
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
