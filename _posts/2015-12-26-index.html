@@ -1,0 +1,176 @@
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">云计算与大数据</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">HEIDSOFT</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">主页</a></li>
+                        <li><a href="{{site.baseurl}}/about.html">关于我们</a></li>
+                        <li><a href="{{site.baseurl}}/contact.html">联系我们</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">产品 <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">DockerService</a></li>
+                                <li><a href="#">OnePaaS</a></li>
+                                <li><a href="#">HeidCloud</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">解决方法</li>
+                                <li><a href="#">云监控解决方案</a></li>
+                                <li><a href="#">云运维解决方案</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>PaaS</h1>
+
+                    <p>PaaS解决方案</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">学习更多</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>IaaS</h1>
+
+                    <p>IaaS解决方案</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">学习更多</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>了解更多</h1>
+
+                    <p></p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">了解更多</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{site.baseurl}}/img/docker.png" style="width: 140px; height: 140px;">
+
+            <h2>DockerService</h2>
+
+            <p></p>
+
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{site.baseurl}}/img/me.jpg" style="width: 140px; height: 140px;">
+
+            <h2>HeidCloud</h2>
+
+            <p></p>
+
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{site.baseurl}}/img/cloud-foundry.png" style="width: 140px; height: 140px;">
+
+            <h2>OnePaaS</h2>
+
+            <p></p>
+
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">我们正在构建一个与众不同的云平台，
+<span class="text-muted">
+请随时关注我们,heidsoft@qq.com
+<h2>{{ page.title }}</h2>
+<ul>
+    {% for post in site.posts %}　　　　　　
+    <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title
+        }}</a></li>
+    {% endfor %}
+</ul>
+</span>
+            </h2>
+            <p class="lead">
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="{{site.baseurl}}/img/service.png">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="{{site.baseurl}}/img/openstack-logo-on-navy-t-shirt.jpg">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">这是一个伟大的创意，<span class="text-muted">关注我们吧</span></h2>
+
+            <p class="lead">我们坚定信念，我们脚踏实地</p>
+        </div>
+    </div>
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">我们在这里,<span class="text-muted">我们突破传统</span></h2>
+
+            <p class="lead">我们努力拼搏，只为实现自己的梦想</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="{{site.baseurl}}/img/i-fight-for-users-t-shirt.jpg">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+
+        <p>&copy; 2015 Company, heidsoft. &middot; <a href="#">Privacy</a> &middot; <a href="#">团队</a></p>
+    </footer>
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="{{site.baseurl}}/bootstrap/dist/js/bootstrap.min.js"></script>
